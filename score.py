@@ -8,12 +8,12 @@ import jieba
 import dict
 import util
 import showprice
-import test_svm
+#import test_svm
 
 def calEmotion(filename,city):
 	# load dict
 	most,very,more,insuff,ish,posdict,negdict,over=dict.init_dict()
-	jieba.load_userdict("d:/src/dic/stock_dict.txt")
+	jieba.load_userdict("dic/stock_dict.txt")
 	# init score
 	score = {}
 	cur_date = 0
@@ -32,7 +32,7 @@ def calEmotion(filename,city):
 		review_id = review_id +1
 		ws.write(review_id,0,review)
 		ws.write(review_id,1,result)
-	w.save("d:\\src\\stock\\" + filename + ".xls")
+	w.save("excel/" + filename + ".xls")
 	# close the connection with database
 	util.closeDB(conn, cur)
 	# generate the emotionlist from score
