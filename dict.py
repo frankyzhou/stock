@@ -7,11 +7,11 @@ def judgeodd(num):
         return 'odd'
 				
 def init_dict():
-		fmost = open('d:/src/dic/mostdict.txt','r')
-		fvery = open('d:/src/dic/verydict.txt','r')
-		fmore = open('d:/src/dic/moredict.txt','r')
-		fish = open('d:/src/dic/ishdict.txt','r')
-		finsuff = open('d:/src/dic/insufficientlydict.txt','r')
+		fmost = open('dic/mostdict.txt','r')
+		fvery = open('dic/verydict.txt','r')
+		fmore = open('dic/moredict.txt','r')
+		fish = open('dic/ishdict.txt','r')
+		finsuff = open('dic/insufficientlydict.txt','r')
 
 		most = []
 		very = []
@@ -34,9 +34,9 @@ def init_dict():
 		fish.close()
 		fmore.close()
 
-		fover = open('d:/src/dic/overdict.txt','r')
-		fpos  = open('d:/src/dic/posdict.txt','r')
-		fneg  = open('d:/src/dic/negdict.txt','r')
+		fover = open('dic/overdict.txt','r')
+		fpos  = open('dic/posdict.txt','r')
+		fneg  = open('dic/negdict.txt','r')
 		for line in fover : over.append(line.strip().decode('gbk'))
 		for line in fpos : posdict.append(line.strip().decode('gbk'))
 		for line in fneg : negdict.append(line.strip().decode('gbk'))

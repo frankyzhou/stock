@@ -9,7 +9,7 @@ def avgList(arraylist):
 # get data from the database and return conn & cur
 def getData(filename,city):
 	#absolute path instead of relative path 
-	conn = sqlite3.connect("d:/src/stock/db/CLICK"+filename+".db")
+	conn = sqlite3.connect("db/CLICK"+filename+".db")
 	cur =conn.cursor()
 	sql = "SELECT date,click,reply,title FROM click"+ filename +" order by date"
 	return cur.execute(sql),conn,cur
